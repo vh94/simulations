@@ -4,8 +4,8 @@ library(r2d3)
 library(JuliaCall)
 library(DT)
 #library(codeModules)
-
-julia<-julia_setup(JULIA_HOME ="/home/vali/julia-1.8.5/bin")
+options(JULIA_HOME ="/home/vali/julia-1.8.5/bin")
+julia<-julia_setup()
 julia_library("DifferentialEquations")
 
 #julia_source("setup.jl")
@@ -64,10 +64,10 @@ character_hex = tribble(
   "Population","#76a2ca",
 )
 
-source("LV_module.R")
-source("SRI_module.R")
-source("DECAY_module.R")
-source("VERH_module.R")
+source("modules/LV_module.R")
+source("modules/SRI_module.R")
+source("modules/DECAY_module.R")
+source("modules/VERH_module.R")
 
 runApp(appDir = "./")
   

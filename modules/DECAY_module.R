@@ -12,12 +12,12 @@ DECAY_UI <- function(id) {
           tabPanel("Sliders",
                    sliderInput(ns("tmax"),"t: timesteps",min = 1,max = 2000,value = 2000, ticks = FALSE),
                    sliderInput(ns("N"),"N: Number of particles",min = 1,max = 1000,value = 400,ticks = FALSE),
-                   sliderInput(ns("λ"),"λ: Decay rate",min = 0.1,max = 10,value = 1.2,ticks = FALSE),
+                   sliderInput(ns("λ"),"λ: Decay rate",min = 0.01,max = 1,value = 0.02,ticks = FALSE),
           ), #end tabpanel.sliders
           tabPanel("Numbers",
                    numericInput(ns("tmax_eq"), "t: timesteps",min = 1,max = 2000,value = 2000),
                    numericInput(ns("N_eq"), "N: Number of particles",min = 1,max = 1000,value = 400),
-                   numericInput(ns("λ_eq"), "λ: Decay rate",min = 0.1,max = 10,value = 1.2),
+                   numericInput(ns("λ_eq"), "λ: Decay rate",min = 0.01,max = 1,value = 0.02),
           )
         )
       ),
